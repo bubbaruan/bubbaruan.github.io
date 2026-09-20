@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="纤手美甲提供专业美甲服务、时尚美甲款式推荐、DIY美甲技巧及美甲保养指南。探索当下最流行的美甲潮流，获取从基础护理到高级设计的实用建议。">
+    <meta name="keywords" content="纤手美甲,美甲,美甲款式,美甲设计,美甲保养,DIY美甲,美甲教程">
+    <title>纤手美甲-时尚美甲款式推荐与专业护理指南</title>
+    <style>
+        :root {
+            --primary-color: #d63384;
+            --primary-hover: #b02a6b;
+            --secondary-color: #fff0f6;
+            --text-main: #333333;
+            --text-secondary: #666666;
+            --text-light: #999999;
+            --bg-body: #f9f9f9;
+            --bg-white: #ffffff;
+            --border-radius: 12px;
+            --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.08);
+            --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-family);
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+            object-fit: cover;
+        }
+
+        /* 布局容器 */
+        .container {
+            width: 100%;
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* 头部导航 */
+        header {
+            background-color: var(--bg-white);
+            box-shadow: var(--shadow-sm);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: var(--text-main);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-main);
+            font-size: 16px;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 15px;
+        }
+
+        .btn-outline {
+            border: 1px solid var(--primary-color);
+            color: var(--primary-color);
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-outline:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 14px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-hover);
+        }
+
+        /* Hero 区域 */
+        .hero {
+            background: linear-gradient(135deg, #fff0f6 0%, #ffe6f0 100%);
+            padding: 80px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -10%;
+            width: 600px;
+            height: 600px;
+            background: rgba(214, 51, 132, 0.1);
+            border-radius: 50%;
+            z-index: 0;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            color: var(--text-main);
+            letter-spacing: -1px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: var(--text-secondary);
+            margin-bottom: 40px;
+        }
+
+        .search-box {
+            display: flex;
+            max-width: 500px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 30px;
+            padding: 5px;
+            box-shadow: var(--shadow-md);
+        }
+
+        .search-box input {
+            flex: 1;
+            border: none;
+            padding: 12px 20px;
+            font-size: 16px;
+            outline: none;
+            border-radius: 30px 0 0 30px;
+        }
+
+        .search-box button {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 0 30px;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        /* 分类导航 */
+        .category-nav {
+            padding: 30px 0;
+            background: white;
+            margin-top: -30px;
+            position: relative;
+            z-index: 10;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 15px;
+        }
+
+        .category-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 15px 10px;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .category-item:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-2px);
+        }
+
+        .cat-icon {
+            width: 48px;
+            height: 48px;
+            background-color: var(--secondary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+
+        .cat-name {
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--text-main);
+        }
+
+        /* 内容区域 */
+        .main-content {
+            padding: 50px 0;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: end;
+            margin-bottom: 30px;
+        }
+
+        .section-title {
+            font-size: 28px;
+            font-weight: 700;
+            position: relative;
+            padding-left: 15px;
+        }
+
+        .section-title::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 5px;
+            height: 24px;
+            background-color: var(--primary-color);
+            border-radius: 2px;
+        }
+
+        .section-link {
+            color: var(--text-secondary);
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .section-link:hover {
+            color: var(--primary-color);
+        }
+
+        /* 热门推荐网格 */
+        .grid-layout {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+        }
+
+        .card {
+            background: white;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: all 0.3s ease;
+            border: 1px solid #eee;
+        }
+
+        .card:hover {
+            box-shadow: var(--shadow-md);
+            transform: translateY(-5px);
+        }
+
+        .card-img-wrapper {
+            position: relative;
+            padding-top: 133.33%; /* 3:4 Aspect Ratio */
+            overflow: hidden;
+        }
+
+        .card-img-wrapper img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.5s ease;
+        }
+
+        .card:hover .card-img-wrapper img {
+            transform: scale(1.05);
+        }
+
+        .card-badge {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: rgba(255, 255, 255, 0.9);
+            color: var(--primary-color);
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 600;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .card-body {
+            padding: 20px;
+        }
+
+        .card-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: var(--text-main);
+            line-height: 1.4;
+        }
+
+        .card-desc {
+            font-size: 14px;
+            color: var(--text-secondary);
+            margin-bottom: 15px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 12px;
+            color: var(--text-light);
+        }
+
+        .card-footer span {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        /* 特色服务/信息 */
+        .features-section {
+            background-color: white;
+            padding: 60px 0;
+            margin-top: 40px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+        }
+
+        .feature-item {
+            text-align: center;
+            padding: 30px;
+            border-radius: var(--border-radius);
+            transition: background-color 0.3s;
+        }
+
+        .feature-item:hover {
+            background-color: var(--secondary-color);
+        }
+
+        .feature-icon {
+            font-size: 40px;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+
+        .feature-item h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: var(--text-main);
+        }
+
+        .feature-item p {
+            font-size: 15px;
+            color: var(--text-secondary);
+        }
+
+        /* 问答/常见问题 */
+        .faq-section {
+            padding: 60px 0;
+            background-color: #fff0f6;
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: white;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .faq-question {
+            font-weight: 600;
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: var(--text-main);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .faq-answer {
+            color: var(--text-secondary);
+            font-size: 15px;
+            line-height: 1.7;
+            display: none;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item.active .faq-question {
+            color: var(--primary-color);
+        }
+
+        /* 页脚 */
+        footer {
+            background-color: #2c2c2c;
+            color: #ccc;
+            padding: 60px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1.5fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-brand h2 {
+            color: white;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .footer-brand p {
+            font-size: 14px;
+            margin-bottom: 20px;
+            max-width: 300px;
+        }
+
+        .footer-col h4 {
+            color: white;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-col ul li a {
+            font-size: 14px;
+            color: #999;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #444;
+            padding-top: 20px;
+            text-align: center;
+            font-size: 13px;
+            color: #777;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 992px) {
+            .grid-layout {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            .features-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-wrapper {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 0;
+                gap: 15px;
+            }
+            nav ul {
+                gap: 15px;
+                font-size: 14px;
+            }
+            .hero h1 {
+                font-size: 32px;
+            }
+            .category-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            .grid-layout {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .category-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .grid-layout {
+                grid-template-columns: 1fr;
+            }
+            .header-actions {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 顶部导航 -->
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path></svg>
+                <span>纤手美甲</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#">热门款式</a></li>
+                    <li><a href="#">美甲教程</a></li>
+                    <li><a href="#">品牌推荐</a></li>
+                    <li><a href="#">关于我们</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="#" class="btn-outline">登录</a>
+                <a href="#" class="btn-primary">预约体验</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 首屏 Hero 区域 -->
+    <section class="hero">
+        <div class="container hero-content">
+            <h1>指尖上的艺术，重塑你的独特魅力</h1>
+            <p>探索2024年最流行美甲趋势，从法式优雅到复古波普，我们为您提供专业的美甲灵感与护理指南。</p>
+            <div class="search-box">
+                <input type="text" placeholder="搜索款式、颜色或风格...">
+                <button>搜索</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 分类导航 -->
+    <div class="container">
+        <div class="category-nav">
+            <div class="category-grid">
+                <div class="category-item">
+                    <div class="cat-icon">💅</div>
+                    <span class="cat-name">法式美甲</span>
+                </div>
+                <div class="category-item">
+                    <div class="cat-icon">🌸</div>
+                    <span class="cat-name">韩式渐变</span>
+                </div>
+                <div class="category-item">
+                    <div class="cat-icon">💎</div>
+                    <span class="cat-name">水晶甲</span>
+                </div>
+                <div class="category-item">
+                    <div class="cat-icon">✨</div>
+                    <span class="cat-name">钻石贴纸</span>
+                </div>
+                <div class="category-item">
+                    <div class="cat-icon">🦋</div>
+                    <span class="cat-name">蝴蝶结</span>
+                </div>
+                <div class="category-item">
+                    <div class="cat-icon">🎨</div>
+                    <span class="cat-name">手绘图案</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 主要内容区 -->
+    <main class="container main-content">
+        
+        <!-- 热门推荐 -->
+        <section class="section">
+            <div class="section-header">
+                <h2 class="section-title">本周热门推荐</h2>
+                <a href="#" class="section-link">查看更多 <span>&rarr;</span></a>
+            </div>
+            
+            <div class="grid-layout">
+                <!-- 卡片 1 -->
+                <article class="card">
+                    <div class="card-img-wrapper">
+                        <span class="card-badge">热门</span>
+                        <img src="https://picsum.photos/seed/nail1/400/533" alt="极简纯色美甲">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">极简纯色系：回归指尖的高级质感</h3>
+                        <p class="card-desc">纯色美甲看似简单，却最能考验甲油胶的涂抹技术与配色美学。本期推荐三种适合春夏的纯色搭配方案。</p>
+                        <div class="card-footer">
+                            <span>👁 1.2w 浏览</span>
+                            <span>👍 856 点赞</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 卡片 2 -->
+                <article class="card">
+                    <div class="card-img-wrapper">
+                        <span class="card-badge">新品</span>
+                        <img src="https://picsum.photos/seed/nail2/400/533" alt="复古波点美甲">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">复古波点风：重现50年代的优雅</h3>
+                        <p class="card-desc">黑白波点是美甲界的经典元素。如何将波点画得大小不一？掌握这3个技巧，让你的波点美甲更具艺术感。</p>
+                        <div class="card-footer">
+                            <span>👁 9.8k 浏览</span>
+                            <span>👍 642 点赞</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 卡片 3 -->
+                <article class="card">
+                    <div class="card-img-wrapper">
+                        <span class="card-badge">教程</span>
+                        <img src="https://picsum.photos/seed/nail3/400/533" alt="美甲护理教程">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">美甲后护理指南：延长甲片寿命</h3>
+                        <p class="card-desc">做完美甲后，正确的日常护理至关重要。本文详细讲解如何避免甲面起皮、脱落以及如何保持甲油的光泽。</p>
+                        <div class="card-footer">
+                            <span>👁 5.6k 浏览</span>
+                            <span>👍 421 点赞</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 卡片 4 -->
+                <article class="card">
+                    <div class="card-img-wrapper">
+                        <span class="card-badge">趋势</span>
+                        <img src="https://picsum.photos/seed/nail4/400/533" alt="极光甲">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">极光甲：捕捉彩虹的七种色彩</h3>
+                        <p class="card-desc">极光甲因其变幻莫测的光泽感而备受追捧。这种美甲款式不仅显白，还能根据光线折射出不同的迷人效果。</p>
+                        <div class="card-footer">
+                            <span>👁 8.9k 浏览</span>
+                            <span>👍 703 点赞</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- 特色服务板块 -->
+        <section class="features-section">
+            <div class="container">
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <div class="feature-icon">🛡️</div>
+                        <h3>严选安全胶体</h3>
+                        <p>所有美甲产品均经过严格筛选，确保无甲醛、无重金属，呵护您的指尖健康。</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">👩‍🎨</div>
+                        <h3>资深美甲师团队</h3>
+                        <p>拥有10年以上经验的美甲师，紧跟国际潮流，为您提供个性化定制服务。</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">🎁</div>
+                        <h3>终身售后保障</h3>
+                        <p>美甲效果不满意可免费重做，定期提供甲面补色服务，让您无后顾之忧。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 常见问题 FAQ -->
+        <section class="faq-section">
+            <div class="container faq-container">
+                <div class="section-header" style="text-align: center; margin-bottom: 40px;">
+                    <h2 class="section-title">常见问题解答</h2>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        美甲后多久可以洗澡？
+                        <span>+</span>
+                    </div>
+                    <div class="faq-answer">
+                        建议做完美甲后至少等待2-4小时再接触水，确保甲油胶完全固化。日常洗手建议佩戴手套，避免长期浸泡在水中导致甲油胶起泡或脱落。
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        脱甲水会伤害指甲吗？
+                        <span>+</span>
+                    </div>
+                    <div class="faq-answer">
+                        适度使用脱甲水是安全的，但频繁使用或使用劣质脱甲水会去除指甲表面的保护油脂层，导致指甲变脆、变黄。建议选择温和型脱甲水，并配合护手霜使用。
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        做水晶甲和光疗甲有什么区别？
+                        <span>+</span>
+                    </div>
+                    <div class="faq-answer">
+                        光疗甲通过紫外线照射固化，质地轻薄透明，适合做单色或透明底色。水晶甲通过粉末和液体的化学反应固化，硬度高，可塑性强，适合做复杂的款式和延长甲片。
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        手指甲和脚指甲的护理有什么不同？
+                        <span>+</span>
+                    </div>
+                    <div class="faq-answer">
+                        手指甲生长速度较慢，角质层较薄，适合做精致、简约的款式。脚指甲角质层较厚，生长速度快，建议选择耐磨性强、颜色较深的款式，并注意保持脚部干燥清洁。
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- 页脚 -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h2>纤手美甲</h2>
+                    <p>专注于指尖美学的分享与传播，为您提供最新的美甲资讯、实用的DIY教程以及专业的美甲服务预约平台。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="#">关于我们</a></li>
+                        <li><a href="#">服务项目</a></li>
+                        <li><a href="#">美甲师团队</a></li>
+                        <li><a href="#">最新活动</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>热门分类</h4>
+                    <ul>
+                        <li><a href="#">法式美甲</a></li>
+                        <li><a href="#">韩式渐变</a></li>
+                        <li><a href="#">美甲教程</a></li>
+                        <li><a href="#">品牌合集</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>联系方式</h4>
+                    <ul>
+                        <li><a href="#">咨询热线：400-123-4567</a></li>
+                        <li><a href="#">商务合作：bd@xianshou.com</a></li>
+                        <li><a href="#">地址：上海市静安区美甲路88号</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 纤手美甲 版权所有 | 本网站内容仅供学习参考</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 广告脚本 -->
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+
+    <script>
+        // 简单的 FAQ 交互逻辑
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    // 关闭其他打开的项
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    // 切换当前项状态
+                    item.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</body>
+                      </html>
