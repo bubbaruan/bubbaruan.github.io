@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="财产保险招聘网 - 专注为财产保险公司及经纪公司提供专业的保险代理人、理赔专员、核保师、精算师及管理人才招聘服务。查看最新保险招聘职位，了解行业薪酬与职业发展。">
+    <meta name="keywords" content="财产保险招聘,保险招聘,保险职位,财产险招聘,保险代理人招聘,保险理赔招聘">
+    <title>财产保险招聘-专业保险人才招聘服务平台</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #0056b3;
+            --primary-dark: #004494;
+            --accent-color: #f39c12;
+            --text-main: #333333;
+            --text-secondary: #666666;
+            --bg-body: #f4f6f9;
+            --bg-white: #ffffff;
+            --border-color: #e0e0e0;
+            --shadow-sm: 0 2px 4px rgba(0,0,0,0.05);
+            --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
+            --radius: 8px;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            line-height: 1.6;
+            color: var(--text-main);
+            background-color: var(--bg-body);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Layout Utilities */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .flex {
+            display: flex;
+        }
+
+        .flex-col {
+            flex-direction: column;
+        }
+
+        .items-center {
+            align-items: center;
+        }
+
+        .justify-between {
+            justify-content: space-between;
+        }
+
+        .justify-center {
+            justify-content: center;
+        }
+
+        .grid {
+            display: grid;
+            gap: 20px;
+        }
+
+        .grid-2 {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .grid-3 {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .grid-4 {
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        /* Header */
+        header {
+            background-color: var(--bg-white);
+            box-shadow: var(--shadow-sm);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-inner {
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: var(--text-main);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-main);
+            font-size: 16px;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 15px;
+        }
+
+        .btn {
+            padding: 8px 20px;
+            border-radius: var(--radius);
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+            border: 1px solid transparent;
+        }
+
+        .btn-outline {
+            border-color: var(--primary-color);
+            color: var(--primary-color);
+            background: transparent;
+        }
+
+        .btn-outline:hover {
+            background: rgba(0, 86, 179, 0.05);
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-dark);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #0056b3 0%, #003d80 100%);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 36px;
+            margin-bottom: 16px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            opacity: 0.9;
+            margin-bottom: 32px;
+        }
+
+        .search-box {
+            background: white;
+            padding: 10px;
+            border-radius: 50px;
+            display: inline-flex;
+            max-width: 600px;
+            width: 100%;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+
+        .search-box input {
+            flex: 1;
+            border: none;
+            padding: 12px 20px;
+            font-size: 16px;
+            outline: none;
+            border-radius: 50px;
+        }
+
+        .search-box button {
+            background-color: var(--accent-color);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 40px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .search-box button:hover {
+            background-color: #e67e22;
+        }
+
+        /* Stats Bar */
+        .stats-bar {
+            background: white;
+            padding: 20px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            text-align: center;
+        }
+
+        .stat-item h3 {
+            font-size: 24px;
+            color: var(--primary-color);
+            margin-bottom: 5px;
+        }
+
+        .stat-item p {
+            color: var(--text-secondary);
+            font-size: 14px;
+        }
+
+        /* Main Content */
+        main {
+            padding: 40px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-title h2 {
+            font-size: 28px;
+            margin-bottom: 10px;
+            color: var(--text-main);
+        }
+
+        .section-title p {
+            color: var(--text-secondary);
+        }
+
+        /* Job Cards */
+        .job-grid {
+            display: grid;
+            gap: 20px;
+        }
+
+        .job-card {
+            background: white;
+            border-radius: var(--radius);
+            padding: 24px;
+            border: 1px solid var(--border-color);
+            transition: transform 0.2s, box-shadow 0.2s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .job-card:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--primary-color);
+        }
+
+        .job-card::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background-color: var(--accent-color);
+            opacity: 0;
+            transition: opacity 0.2s;
+        }
+
+        .job-card:hover::before {
+            opacity: 1;
+        }
+
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 12px;
+        }
+
+        .job-title {
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--text-main);
+        }
+
+        .job-type {
+            background-color: #e8f4fd;
+            color: var(--primary-color);
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .company-info {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 16px;
+        }
+
+        .company-logo {
+            width: 40px;
+            height: 40px;
+            background-color: #eee;
+            border-radius: 4px;
+            object-fit: cover;
+        }
+
+        .company-name {
+            font-weight: 500;
+            color: var(--text-main);
+        }
+
+        .company-tag {
+            font-size: 12px;
+            color: var(--text-secondary);
+        }
+
+        .job-details {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 20px;
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+
+        .detail-item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .job-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid #f0f0f0;
+            padding-top: 16px;
+        }
+
+        .salary {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        .salary span {
+            font-size: 12px;
+            color: var(--text-secondary);
+            font-weight: 400;
+        }
+
+        .post-time {
+            font-size: 13px;
+            color: #999;
+        }
+
+        /* Features Section */
+        .features-section {
+            background-color: white;
+            padding: 60px 0;
+            margin-bottom: 40px;
+        }
+
+        .feature-card {
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background-color: rgba(0, 86, 179, 0.1);
+            color: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 24px;
+        }
+
+        .feature-card h3 {
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        .feature-card p {
+            color: var(--text-secondary);
+            font-size: 14px;
+        }
+
+        /* Recruitment Guide */
+        .guide-section {
+            padding: 40px 0;
+        }
+
+        .guide-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .guide-item {
+            background: white;
+            padding: 30px;
+            border-radius: var(--radius);
+            border: 1px solid var(--border-color);
+        }
+
+        .guide-item h3 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .guide-item ul {
+            padding-left: 20px;
+        }
+
+        .guide-item li {
+            margin-bottom: 8px;
+            font-size: 14px;
+            color: var(--text-secondary);
+            list-style-type: disc;
+        }
+
+        /* FAQ */
+        .faq-section {
+            background-color: white;
+            padding: 60px 0;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid var(--border-color);
+            padding: 20px 0;
+        }
+
+        .faq-question {
+            font-weight: 600;
+            font-size: 16px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-answer {
+            margin-top: 15px;
+            color: var(--text-secondary);
+            font-size: 14px;
+            line-height: 1.8;
+            display: none; /* JS will toggle */
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item.active .faq-question {
+            color: var(--primary-color);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            padding: 60px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-brand p {
+            margin-top: 15px;
+            color: #bdc3c7;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .footer-col h4 {
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            color: #bdc3c7;
+            font-size: 14px;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #34495e;
+            padding-top: 20px;
+            text-align: center;
+            font-size: 13px;
+            color: #95a5a6;
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .grid-4, .grid-3 {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header-inner {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 0;
+                gap: 15px;
+            }
+            nav ul {
+                gap: 15px;
+                font-size: 14px;
+            }
+            .stats-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .grid-2, .grid-3, .grid-4 {
+                grid-template-columns: 1fr;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            .job-header {
+                flex-direction: column;
+                gap: 5px;
+            }
+            .job-footer {
+                flex-direction: column;
+                gap: 10px;
+                align-items: flex-start;
+            }
+            .salary {
+                margin-bottom: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container header-inner">
+            <a href="#" class="logo">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                </svg>
+                <span>财险招聘</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#">最新职位</a></li>
+                    <li><a href="#">热门公司</a></li>
+                    <li><a href="#">求职指南</a></li>
+                    <li><a href="#">保险资讯</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="#" class="btn btn-outline">企业登录</a>
+                <a href="#" class="btn btn-primary">免费发布职位</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>连接保险人才与财产险企业</h1>
+            <p>海量财产保险行业职位，涵盖核保、理赔、销售、管理及精算等核心岗位</p>
+            <div class="search-box">
+                <input type="text" placeholder="搜索职位关键词，如：车险理赔、核保师、保险代理人...">
+                <button>搜索</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Bar -->
+    <div class="stats-bar">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h3>5000+</h3>
+                    <p>财产保险公司</p>
+                </div>
+                <div class="stat-item">
+                    <h3>200,000+</h3>
+                    <p>最新职位</p>
+                </div>
+                <div class="stat-item">
+                    <h3>1,500,000+</h3>
+                    <p>注册人才</p>
+                </div>
+                <div class="stat-item">
+                    <h3>98%</h3>
+                    <p>企业满意度</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="container">
+        
+        <!-- Latest Jobs Section -->
+        <section class="section-title">
+            <h2>最新财产保险职位</h2>
+            <p>为您精选近期发布的优质招聘信息，把握职业发展良机</p>
+        </section>
+
+        <div class="job-grid grid-3">
+            <!-- Job Card 1 -->
+            <article class="job-card">
+                <div class="job-header">
+                    <h3 class="job-title">车险理赔查勘员</h3>
+                    <span class="job-type">全职</span>
+                </div>
+                <div class="company-info">
+                    <img src="https://picsum.photos/seed/ins1/40/40" alt="公司Logo" class="company-logo">
+                    <div>
+                        <div class="company-name">平安财产保险</div>
+                        <div class="company-tag">北京 · 朝阳区</div>
+                    </div>
+                </div>
+                <div class="job-details">
+                    <div class="detail-item">💰 8K-15K</div>
+                    <div class="detail-item">📍 3-5年经验</div>
+                    <div class="detail-item">🎓 大专及以上</div>
+                    <div class="detail-item">📅 2023-10-24</div>
+                </div>
+                <div class="job-footer">
+                    <div class="salary">8K-15K<span>/月</span></div>
+                    <div class="post-time">刚刚发布</div>
+                </div>
+            </article>
+
+            <!-- Job Card 2 -->
+            <article class="job-card">
+                <div class="job-header">
+                    <h3 class="job-title">财产险核保专员</h3>
+                    <span class="job-type">全职</span>
+                </div>
+                <div class="company-info">
+                    <img src="https://picsum.photos/seed/ins2/40/40" alt="公司Logo" class="company-logo">
+                    <div>
+                        <div class="company-name">太平洋财产保险</div>
+                        <div class="company-tag">上海 · 浦东新区</div>
+                    </div>
+                </div>
+                <div class="job-details">
+                    <div class="detail-item">💰 15K-30K</div>
+                    <div class="detail-item">📍 5-10年经验</div>
+                    <div class="detail-item">🎓 本科及以上</div>
+                    <div class="detail-item">📅 2023-10-23</div>
+                </div>
+                <div class="job-footer">
+                    <div class="salary">15K-30K<span>/月</span></div>
+                    <div class="post-time">1小时前</div>
+                </div>
+            </article>
+
+            <!-- Job Card 3 -->
+            <article class="job-card">
+                <div class="job-header">
+                    <h3 class="job-title">保险代理人/经纪人</h3>
+                    <span class="job-type">兼职/全职</span>
+                </div>
+                <div class="company-info">
+                    <img src="https://picsum.photos/seed/ins3/40/40" alt="公司Logo" class="company-logo">
+                    <div>
+                        <div class="company-name">泰康人寿（财产板块）</div>
+                        <div class="company-tag">全国范围</div>
+                    </div>
+                </div>
+                <div class="job-details">
+                    <div class="detail-item">💰 底薪4K+高提成</div>
+                    <div class="detail-item">📍 经验不限</div>
+                    <div class="detail-item">🎓 学历不限</div>
+                    <div class="detail-item">📅 2023-10-23</div>
+                </div>
+                <div class="job-footer">
+                    <div class="salary">底薪4K<span>+提成</span></div>
+                    <div class="post-time">2小时前</div>
+                </div>
+            </article>
+
+            <!-- Job Card 4 -->
+            <article class="job-card">
+                <div class="job-header">
+                    <h3 class="job-title">非车险业务经理</h3>
+                    <span class="job-type">全职</span>
+                </div>
+                <div class="company-info">
+                    <img src="https://picsum.photos/seed/ins4/40/40" alt="公司Logo" class="company-logo">
+                    <div>
+                        <div class="company-name">人保财险</div>
+                        <div class="company-tag">广州 · 天河区</div>
+                    </div>
+                </div>
+                <div class="job-details">
+                    <div class="detail-item">💰 12K-25K</div>
+                    <div class="detail-item">📍 3-5年经验</div>
+                    <div class="detail-item">🎓 本科及以上</div>
+                    <div class="detail-item">📅 2023-10-22</div>
+                </div>
+                <div class="job-footer">
+                    <div class="salary">12K-25K<span>/月</span></div>
+                    <div class="post-time">昨天</div>
+                </div>
+            </article>
+
+            <!-- Job Card 5 -->
+            <article class="job-card">
+                <div class="job-header">
+                    <h3 class="job-title">保险精算师（中级）</h3>
+                    <span class="job-type">全职</span>
+                </div>
+                <div class="company-info">
+                    <img src="https://picsum.photos/seed/ins5/40/40" alt="公司Logo" class="company-logo">
+                    <div>
+                        <div class="company-name">中华联合财产保险</div>
+                        <div class="company-tag">乌鲁木齐 · 高新区</div>
+                    </div>
+                </div>
+                <div class="job-details">
+                    <div class="detail-item">💰 30K-50K</div>
+                    <div class="detail-item">📍 10年+经验</div>
+                    <div class="detail-item">🎓 硕士及以上</div>
+                    <div class="detail-item">📅 2023-10-21</div>
+                </div>
+                <div class="job-footer">
+                    <div class="salary">30K-50K<span>/月</span></div>
+                    <div class="post-time">昨天</div>
+                </div>
+            </article>
+
+            <!-- Job Card 6 -->
+            <article class="job-card">
+                <div class="job-header">
+                    <h3 class="job-title">保险内勤/行政助理</h3>
+                    <span class="job-type">全职</span>
+                </div>
+                <div class="company-info">
+                    <img src="https://picsum.photos/seed/ins6/40/40" alt="公司Logo" class="company-logo">
+                    <div>
+                        <div class="company-name">阳光财产保险</div>
+                        <div class="company-tag">成都 · 武侯区</div>
+                    </div>
+                </div>
+                <div class="job-details">
+                    <div class="detail-item">💰 6K-10K</div>
+                    <div class="detail-item">📍 1-3年经验</div>
+                    <div class="detail-item">🎓 大专及以上</div>
+                    <div class="detail-item">📅 2023-10-20</div>
+                </div>
+                <div class="job-footer">
+                    <div class="salary">6K-10K<span>/月</span></div>
+                    <div class="post-time">2天前</div>
+                </div>
+            </article>
+        </div>
+
+        <div style="text-align: center; margin-top: 40px;">
+            <a href="#" class="btn btn-outline">查看更多职位</a>
+        </div>
+
+        <!-- Features Section -->
+        <section class="features-section">
+            <div class="container">
+                <div class="grid grid-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">🛡️</div>
+                        <h3>严格审核</h3>
+                        <p>所有企业及职位信息经过人工双重审核，确保招聘信息真实可靠</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">⚡</div>
+                        <h3>极速匹配</h3>
+                        <p>基于智能算法，快速匹配符合您职业规划的财产保险岗位</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📊</div>
+                        <h3>行业分析</h3>
+                        <p>提供财产保险行业薪酬报告与人才需求趋势分析</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🤝</div>
+                        <h3>专业服务</h3>
+                        <p>专属HR顾问团队，提供从简历优化到面试指导的一站式服务</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Guide Section -->
+        <section class="guide-section">
+            <div class="section-title">
+                <h2>财产保险求职指南</h2>
+                <p>了解财产保险行业特点，助您顺利进入心仪的岗位</p>
+            </div>
+            <div class="guide-list">
+                <div class="guide-item">
+                    <h3>📋 财产保险岗位分类</h3>
+                    <ul>
+                        <li><strong>核保岗：</strong>负责风险评估与费率厘定，需具备扎实的保险专业知识。</li>
+                        <li><strong>理赔岗：</strong>负责事故勘查、定损与赔案处理，需具备沟通与抗压能力。</li>
+                        <li><strong>销售岗：</strong>拓展企业或个人客户，需具备良好的市场开拓能力。</li>
+                        <li><strong>精算岗：</strong>负责产品开发与准备金评估，需精通数学与统计。</li>
+                    </ul>
+                </div>
+                <div class="guide-item">
+                    <h3>🎓 入行必备技能</h3>
+                    <ul>
+                        <li>熟悉《保险法》及相关保险条款。</li>
+                        <li>掌握基础的风险管理知识。</li>
+                        <li>具备良好的数据分析与逻辑思维能力。</li>
+                        <li>优秀的客户服务意识与沟通技巧。</li>
+                    </ul>
+                </div>
+                <div class="guide-item">
+                    <h3>💡 面试注意事项</h3>
+                    <ul>
+                        <li>准备2-3个过往成功处理风险案例的说明。</li>
+                        <li>了解应聘公司的主营业务及市场定位。</li>
+                        <li>展示对财产保险行业长期发展的信心。</li>
+                        <li>着装得体，展现专业形象。</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>常见问题解答</h2>
+                    <p>关于财产保险招聘的疑问，这里都有答案</p>
+                </div>
+                <div style="max-width: 800px; margin: 0 auto;">
+                    <div class="faq-item">
+                        <div class="faq-question">财产保险行业的薪酬水平如何？ <span>+</span></div>
+                        <div class="faq-answer">
+                            财产保险行业薪酬结构通常为“底薪+绩效+提成”。核保、精算、风控等专业技术岗位底薪较高，涨幅稳定；理赔岗位底薪适中，主要依靠案件处理提成；销售岗位底薪较低，但上限很高，业绩优秀者收入可观。目前行业平均月薪范围在6K-30K之间。
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">应届生可以申请财产保险岗位吗？ <span>+</span></div>
+                        <div class="faq-answer">
+                            可以。应届生主要面向管培生、内勤行政助理、初级理赔助理等岗位。公司通常会提供系统的入职培训，帮助新人快速成长。建议在校期间多学习保险基础知识，并考取相关的从业资格证书。
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">如何辨别招聘信息的真伪？ <span>+</span></div>
+                        <div class="faq-answer">
+                            本站所有发布的招聘信息均经过企业资质认证。建议求职者通过正规渠道投递简历，警惕任何要求缴纳“培训费”、“服装费”或“保证金”的行为。面试通常在正规办公场所进行，如遇不合理收费请立即终止。
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">财产保险与人寿保险有什么区别？ <span>+</span></div>
+                        <div class="faq-answer">
+                            财产保险（简称“财险”）主要保障有形财产及其相关利益，如车辆、厂房、货物等；人寿保险（简称“寿险”）主要保障人的生命和身体。财险业务更侧重于风险管理、损失补偿和防灾防损。
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo" style="color: white;">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                        </svg>
+                        <span>财险招聘</span>
+                    </div>
+                    <p>专注财产保险行业垂直招聘平台，致力于为保险公司与保险人才搭建高效、透明的沟通桥梁。我们服务超过5000家财产保险公司，拥有百万级注册人才库。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>求职服务</h4>
+                    <ul>
+                        <li><a href="#">职位搜索</a></li>
+                        <li><a href="#">简历管理</a></li>
+                        <li><a href="#">职业测评</a></li>
+                        <li><a href="#">薪酬查询</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>企业服务</h4>
+                    <ul>
+                        <li><a href="#">发布职位</a></li>
+                        <li><a href="#">人才搜索</a></li>
+                        <li><a href="#">企业认证</a></li>
+                        <li><a href="#">招聘方案</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>关于我们</h4>
+                    <ul>
+                        <li><a href="#">平台介绍</a></li>
+                        <li><a href="#">合作加盟</a></li>
+                        <li><a href="#">隐私政策</a></li>
+                        <li><a href="#">联系客服</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 财产保险招聘网 版权所有 | 京ICP备12345678号</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple FAQ Toggle Logic
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    // Close others
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    // Toggle current
+                    item.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</body>
+  </html>
